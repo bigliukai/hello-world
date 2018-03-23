@@ -50,11 +50,7 @@ use drug_Q5.dta
  list Q5_3_11 Q5_3_2 Q5_3 if strmatch(Q5_3, "三磷酸腺苷*")
  replace Q5_3_other="三磷酸腺苷二钠注射液" if Q5_3=="三磷酸腺苷"
  
- list Q5_3_11 Q5_3 if strmatch(Q5_3, "丁*")
- replace Q5_3_other="丹参注射液" if Q5_3=="丹参注射费"
- replace Q5_3_other="复方丹参片" if strmatch(Q5_3,"丹参片*") & (Q5_3_11=="Z20073184"  ///
-                                   | Q5_3_11=="Z45021353" | Q5_3_11=="Z20020119")
-								   
+
  replace Q5_3_other="二羟丙茶碱注射液" if Q5_3=="二羟丙茶碱注射液（喘定）" | strmatch(Q5_3,"喘*针")
  replace Q5_3_other="五维他口服溶液"   if Q5_3=="五维他（五维他口服溶液）"
  
